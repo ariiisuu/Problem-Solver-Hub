@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solver Hub - Socho • Pucho • Samadhan Pao</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 font-sans text-slate-800">
+
+    <!-- HEADER SECTION -->
+    <header class="bg-white border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-amber-400 rounded-full flex items-center justify-center shadow-md">
+                    <i class="fa-solid fa-lightbulb text-slate-900 text-lg"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg text-slate-900 leading-tight">Problem Solver <span class="text-blue-600">Hub</span></h1>
+                    <p class="text-[10px] text-slate-500 tracking-wider">Socho • Pucho • Samadhan Pao</p>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#" class="text-blue-600 font-semibold">Home</a>
+                <a href="#" class="hover:text-blue-600 transition">Solutions</a>
+                <a href="#" class="hover:text-blue-600 transition">Categories</a>
+                <a href="#" class="hover:text-blue-600 transition">About</a>
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="flex items-center space-x-4">
+                <button class="w-10 h-10 rounded-full hover:bg-slate-100 flex items-center justify-center text-slate-600 transition">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium text-sm shadow-md transition">
+                    Login
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-br from-amber-50/50 via-blue-50/30 to-slate-100 py-16 lg:py-24 overflow-hidden border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+                Problem hai? <span class="text-blue-600">Solution</span> yahan hai.
+            </h2>
+            <p class="text-slate-600 text-base lg:text-lg mb-8 max-w-xl mx-auto">
+                Daily life, learning aur business problems ke simple solutions ek jagah.
+            </p>
+
+            <!-- Search Bar -->
+            <div class="relative max-w-2xl mx-auto">
+                <div class="flex items-center bg-white rounded-full shadow-lg border border-slate-200 p-2 pl-6">
+                    <i class="fa-solid fa-magnifying-glass text-slate-400 mr-3 text-lg"></i>
+                    <input type="text" placeholder="Apni problem search karo..." class="w-full bg-transparent focus:outline-none text-slate-800 placeholder-slate-400 text-base">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-md transition shrink-0 ml-2">
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search Suggestions -->
+            <div class="mt-4 text-xs lg:text-sm text-slate-500">
+                <span class="font-medium text-slate-600">Udaharan:</span> Study plan, Business idea, Mobile repair, Paise kaise bachaye
+            </div>
+        </div>
+    </section>
+
+    <!-- POPULAR CATEGORIES -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="mb-10">
+            <h3 class="text-2xl font-bold text-slate-900 mb-1">Popular Categories</h3>
+            <p class="text-slate-500 text-sm">Apni problem ke hisaab se category choose karo.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <!-- Card 1: Learning -->
+            <div class="bg-blue-50/60 hover:bg-blue-100/70 border border-blue-100 rounded-2xl p-6 transition group cursor-pointer text-center flex flex-col items-center">
+                <div class="w-14 h-14 bg-blue-600 text-white rounded-xl flex items-center justify-center text-2xl mb-4 shadow-md group-hover:scale-110 transition">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <h4 class="font-bold text-slate-900 text-lg mb-1">Learning</h4>
+                <p class="text-xs text-slate-500">Skills aur knowledge</p>
+            </div>
+
+            <!-- Card 2: Business -->
+            <div class="bg-emerald-50/60 hover:bg-emerald-100/70 border border-emerald-100 rounded-2xl p-6 transition group cursor-pointer text-center flex flex-col items-center">
+                <div class="w-14 h-14 bg-emerald-600 text-white rounded-xl flex items-center justify-center text-2xl mb-4 shadow-md group-hover:scale-110 transition">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <h4 class="font-bold text-slate-900 text-lg mb-1">Business</h4>
+                <p class="text-xs text-slate-500">Business ideas aur solutions</p>
+            </div>
+
+            <!-- Card 3: Technology -->
+            <div class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 rounded-2xl p-6 transition group cursor-pointer text-center flex flex-col items-center">
+                <div class="w-14 h-14 bg-purple-600 text-white rounded-xl flex items-center justify-center text-2xl mb-4 shadow-md group-hover:scale-110 transition">
+                    <i class="fa-solid fa-laptop"></i>
+                </div>
+                <h4 class="font-bold text-slate-900 text-lg mb-1">Technology</h4>
+                <p class="text-xs text-slate-500">Apps, tools aur gadgets</p>
+            </div>
+
+            <!-- Card 4: Health & Fitness -->
+            <div class="bg-rose-50/60 hover:bg-rose-100/70 border border-rose-100 rounded-2xl p-6 transition group cursor-pointer text-center flex flex-col items-center">
+                <div class="w-14 h-14 bg-rose-600 text-white rounded-xl flex items-center justify-center text-2xl mb-4 shadow-md group-hover:scale-110 transition">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <h4 class="font-bold text-slate-900 text-lg mb-1">Health & Fitness</h4>
+                <p class="text-xs text-slate-500">Healthy life, better you</p>
+            </div>
+
+            <!-- Card 5: Money & Finance -->
+            <div class="bg-amber-50/60 hover:bg-amber-100/70 border border-amber-100 rounded-2xl p-6 transition group cursor-pointer text-center flex flex-col items-center">
+                <div class="w-14 h-14 bg-amber-500 text-white rounded-xl flex items-center justify-center text-2xl mb-4 shadow-md group-hover:scale-110 transition">
+                    <i class="fa-solid fa-coins"></i>
+                </div>
+                <h4 class="font-bold text-slate-900 text-lg mb-1">Money & Finance</h4>
+                <p class="text-xs text-slate-500">Bachat, income aur invest</p>
+            </div>
+
+            <!-- Card 6: Daily Life -->
+            <div class="bg-cyan-50/60 hover:bg-cyan-100/70 border border-cyan-100 rounded-2xl p-6 transition group cursor-pointer text-center flex flex-col items-center">
+                <div class="w-14 h-14 bg-cyan-600 text-white rounded-xl flex items-center justify-center text-2xl mb-4 shadow-md group-hover:scale-110 transition">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+                <h4 class="font-bold text-slate-900 text-lg mb-1">Daily Life</h4>
+                <p class="text-xs text-slate-500">Ghar, travel, routine</p>
+            </div>
+
+            <!-- Card 7: Career -->
+            <div class="bg-indigo-50/60 hover:bg-indigo-100/70 border border-indigo-100 rounded-2xl p-6 transition group cursor-pointer text-center flex flex-col items-center">
+                <div class="w-14 h-14 bg-indigo-600 text-white rounded-xl flex items-center justify-center text-2xl mb-4 shadow-md group-hover:scale-110 transition">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <h4 class="font-bold text-slate-900 text-lg mb-1">Career</h4>
+                <p class="text-xs text-slate-500">Jobs, skills, growth</p>
+            </div>
+
+            <!-- Card 8: Miscellaneous -->
+            <div class="bg-slate-100 hover:bg-slate-200/70 border border-slate-200 rounded-2xl p-6 transition group cursor-pointer text-center flex flex-col items-center">
+                <div class="w-14 h-14 bg-slate-700 text-white rounded-xl flex items-center justify-center text-2xl mb-4 shadow-md group-hover:scale-110 transition">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <h4 class="font-bold text-slate-900 text-lg mb-1">Miscellaneous</h4>
+                <p class="text-xs text-slate-500">Aur bhi bahut kuch</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIMPLE STEPS, BIG SOLUTIONS -->
+    <section class="bg-slate-900 text-white py-16 my-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="inline-block w-12 h-12 bg-amber-400 text-slate-900 rounded-full flex items-center justify-center text-xl mb-4 shadow-lg">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3 class="text-2xl lg:text-3xl font-bold mb-3">Simple Steps, Big Solutions</h3>
+            <p class="text-slate-400 text-sm max-w-lg mx-auto mb-12">
+                Hum yahan experts ke ideas, real experiences aur practical tips ke saath aapki madad karte hain.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center px-4">
+                    <div class="w-16 h-16 bg-blue-600/20 border border-blue-500/40 text-blue-400 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">1. Problem search karo</h4>
+                    <p class="text-xs text-slate-400">Apni problem likho ya category select karo.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center px-4">
+                    <div class="w-16 h-16 bg-blue-600/20 border border-blue-500/40 text-blue-400 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">2. Solution padho</h4>
+                    <p class="text-xs text-slate-400">Real user experiences aur experts ke tips dekho.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center px-4">
+                    <div class="w-16 h-16 bg-blue-600/20 border border-blue-500/40 text-blue-400 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">3. Apni life improve karo</h4>
+                    <p class="text-xs text-slate-400">Small steps, big changes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <!-- Brand -->
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-amber-400 rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-lightbulb text-slate-900"></i>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white text-base">Problem Solver <span class="text-blue-500">Hub</span></h5>
+                    <p class="text-[11px] text-slate-500">Socho • Pucho • Samadhan Pao</p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="flex justify-center space-x-6 text-sm">
+                <a href="#" class="hover:text-white transition">Home</a>
+                <a href="#" class="hover:text-white transition">Solutions</a>
+                <a href="#" class="hover:text-white transition">Categories</a>
+                <a href="#" class="hover:text-white transition">About</a>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="flex justify-center md:justify-end space-x-4 text-slate-400">
+                <a href="#" class="w-9 h-9 bg-slate-900 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-youtube text-sm"></i></a>
+                <a href="#" class="w-9 h-9 bg-slate-900 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+                <a href="#" class="w-9 h-9 bg-slate-900 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-telegram text-sm"></i></a>
+                <a href="#" class="w-9 h-9 bg-slate-900 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-slate-900/60 flex flex-col sm:flex-row justify-between text-xs text-slate-500">
+            <p>© 2026 Problem Solver Hub. All rights reserved.</p>
+            <p class="mt-2 sm:mt-0">Better Solutions • Better You</p>
+        </div>
+    </footer>
+
+</body>
+</html>
