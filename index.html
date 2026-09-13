@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solver Hub - Socho • Pucho • Samadhan Pao</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        /* Navbar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            font-size: 28px;
+        }
+
+        .logo-text h1 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .logo-text p {
+            font-size: 11px;
+            color: #64748b;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        nav a:hover, nav a.active {
+            color: #2563eb;
+        }
+
+        .login-btn {
+            background: #2563eb;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #fef3c7 100%);
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #475569;
+            margin-bottom: 40px;
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            background: white;
+            padding: 8px 8px 8px 20px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            align-items: center;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            color: #334155;
+        }
+
+        .search-box button {
+            background: #2563eb;
+            border: none;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-examples {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        /* Categories Section */
+        .categories {
+            padding: 60px 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .section-title p {
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 5px;
+            margin-bottom: 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            transition: transform 0.2s ease;
+            border: 1px solid #f1f5f9;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .category-card h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 5px;
+        }
+
+        .category-card p {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        /* Simple Steps Section */
+        .steps-section {
+            background: #0b1329;
+            color: white;
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .steps-section .section-title h3 {
+            color: white;
+        }
+
+        .steps-section .section-title p {
+            color: #94a3b8;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid #1e293b;
+            padding: 30px 20px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .step-card span {
+            font-size: 28px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .step-card h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .step-card p {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        /* Footer */
+        footer {
+            background: #0b1329;
+            color: #94a3b8;
+            padding: 50px 8% 20px 8%;
+            border-top: 1px solid #1e293b;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo h2 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .footer-logo p {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .footer-links h4, .footer-social h4 {
+            color: white;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-links ul li a {
+            text-decoration: none;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        .footer-links ul li a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 16px;
+        }
+
+        .social-icons a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 20px auto 0 auto;
+            font-size: 12px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-area">
+            <div class="logo-icon">💡</div>
+            <div class="logo-text">
+                <h1>Problem Solver Hub</h1>
+                <p>Socho • Pucho • Samadhan Pao</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="login-btn">Login</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Problem hai? <span>Solution</span> yahan hai.</h2>
+        <p>Daily life, learning aur business problems ke simple solutions ek jagah.</p>
+        
+        <div class="search-box">
+            <input type="text" placeholder="Apni problem search karo...">
+            <button>→</button>
+        </div>
+        <div class="search-examples">
+            Udaharan: Study plan, Business idea, Mobile repair, Paise kaise bachaye
+        </div>
+    </section>
+
+    <!-- Popular Categories -->
+    <section class="categories">
+        <div class="section-title">
+            <h3>Popular Categories</h3>
+            <p>Apni problem ke hisaab se category choose karo.</p>
+        </div>
+
+        <div class="grid-container">
+            <div class="category-card">
+                <div class="card-icon" style="background: #eff6ff; color: #2563eb;">📚</div>
+                <h4>Learning</h4>
+                <p>Skills aur knowledge</p>
+            </div>
+            <div class="category-card">
+                <div class="card-icon" style="background: #f0fdf4; color: #16a34a;">💼</div>
+                <h4>Business</h4>
+                <p>Business ideas aur solutions</p>
+            </div>
+            <div class="category-card">
+                <div class="card-icon" style="background: #faf5ff; color: #9333ea;">💻</div>
+                <h4>Technology</h4>
+                <p>Apps, tools aur gadgets</p>
+            </div>
+            <div class="category-card">
+                <div class="card-icon" style="background: #fff1f2; color: #e11d48;">❤️</div>
+                <h4>Health & Fitness</h4>
+                <p>Healthy life, better you</p>
+            </div>
+            <div class="category-card">
+                <div class="card-icon" style="background: #fef3c7; color: #d97706;">💰</div>
+                <h4>Money & Finance</h4>
+                <p>Bachat, income aur invest</p>
+            </div>
+            <div class="category-card">
+                <div class="card-icon" style="background: #e0f2fe; color: #0284c7;">🏠</div>
+                <h4>Daily Life</h4>
+                <p>Ghar, travel, routine</p>
+            </div>
+            <div class="category-card">
+                <div class="card-icon" style="background: #e0e7ff; color: #4f46e5;">👤</div>
+                <h4>Career</h4>
+                <p>Jobs, skills, growth</p>
+            </div>
+            <div class="category-card">
+                <div class="card-icon" style="background: #f1f5f9; color: #475569;">💡</div>
+                <h4>Miscellaneous</h4>
+                <p>Aur bhi bahut kuch</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Steps Section -->
+    <section class="steps-section">
+        <div class="section-title" style="margin-bottom: 40px;">
+            <h3>💡 Simple Steps, Big Solutions</h3>
+            <p>Hum yahan experts ke ideas, real experiences aur practical tips ke saath aapki madad karte hain.</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <span>🔍</span>
+                <h4>1. Problem search karo</h4>
+                <p>Apni problem likho ya category select karo.</p>
+            </div>
+            <div class="step-card">
+                <span>📋</span>
+                <h4>2. Solution padho</h4>
+                <p>Real user experiences aur experts ke tips dekho.</p>
+            </div>
+            <div class="step-card">
+                <span>😊</span>
+                <h4>3. Apni life improve karo</h4>
+                <p>Small steps, big changes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>💡 Problem Solver Hub</h2>
+                <p>Socho • Pucho • Samadhan Pao</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#">🌐</a>
+                    <a href="#">📷</a>
+                    <a href="#">✈️</a>
+                    <a href="#">✖️</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Problem Solver Hub. All rights reserved.</p>
+            <p>Better Solutions • Better You</p>
+        </div>
+    </footer>
+
+</body>
+</html>
